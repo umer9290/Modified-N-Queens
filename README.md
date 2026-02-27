@@ -40,7 +40,6 @@ ModifiedNQueens.hpp / .cpp – Board state, initial state, actions, result funct
 
 SearchAlgorithms.hpp / .cpp – Implements BFS, UCS, and A* search
 
-Utilities – Helper functions for state tracking and comparison
 
 # Team Members
 
