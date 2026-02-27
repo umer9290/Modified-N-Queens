@@ -1,0 +1,153 @@
+CSE307 - Introduction to Artificial Intelligence
+Assignment #1
+Modified N-Queens Problem
+Team Members: Umer Bin Affan (30497), Raheel Shaikh (31554)
+-----------------------------------------------------------
+
+Results: 
+---------------------------------------------------
+N = 4
+---------------------------------------------------
+
+BFS:
+
+. Q . .
+. . . Q
+Q . . . 
+. . Q .
+
+Nodes Expanded: 1025
+Frontier Remaining: 1346
+
+UCS:
+
+. Q . . 
+. . . Q
+Q . . .
+. . Q .
+
+Nodes Expanded: 1040
+Frontier Remaining: 6586
+
+A*:
+
+. . Q .
+Q . . .
+. . . Q
+. Q . .
+
+Nodes Expanded: 19
+Frontier Remaining: 137
+
+
+---------------------------------------------------
+N = 5
+---------------------------------------------------
+
+BFS:
+
+. . Q . . 
+. . . . Q
+. Q . . .
+. . . Q .
+Q . . . .
+
+Nodes Expanded: 67119
+Frontier Remaining: 65829
+
+UCS:
+
+Q . . . . 
+. . . Q .
+. Q . . .
+. . . . Q
+. . Q . .
+
+Nodes Expanded: 97936
+Frontier Remaining: 770263
+
+A*:
+
+. . . Q .
+Q . . . .
+. . Q . .
+. . . . Q
+. Q . . .
+
+Nodes Expanded: 21
+Frontier Remaining: 212
+
+---------------------------------------------------
+N = 6
+---------------------------------------------------
+BFS and UCS required too much computation and were not practical for larger boards. Therefore,
+only the results from A* are presented(from N = 6 onwards).
+
+A*: 
+
+. Q . . . .
+. . . Q . .
+. . . . . Q
+Q . . . . .
+. . Q . . .
+. . . . Q .
+
+Nodes Expanded: 198
+Frontier Remaining: 2819
+
+---------------------------------------------------
+N = 7
+---------------------------------------------------
+
+A*:
+
+. . . . Q . . 
+. . Q . . . .
+Q . . . . . .
+. . . . . Q .
+. . . Q . . .
+. Q . . . . .
+. . . . . . Q
+
+Nodes Expanded: 5565
+Frontier Remaining: 105603
+
+---------------------------------------------------
+N = 8
+---------------------------------------------------
+
+A*: 
+
+. . . . . . Q . 
+. . . Q . . . .
+. Q . . . . . .
+. . . . Q . . .
+. . . . . . . Q
+Q . . . . . . .
+. . Q . . . . .
+. . . . . Q . .
+
+Nodes Expanded: 147816
+Frontier Remaining: 3327288
+
+
+
+---------------------------------------------------
+Heuristic Used: 
+---------------------------------------------------
+For N ≥ 6, BFS and UCS were computationally infeasible due to the exponential growth of the state space. 
+The same A* algorithm used for smaller N was applied without any modifications.
+
+---------------------------------------------------
+Observations / Modifications for Larger N:
+---------------------------------------------------
+
+BFS expands nodes level by level without considering cost or heuristic, 
+which leads to large expansion for higher N.
+
+UCS expands based on cumulative path cost. Since each move has uniform 
+cost in this problem, UCS behaves similarly to BFS but is implemented 
+using a priority queue.
+
+A* performs significantly better for larger N because it uses a heuristic 
+(conflict count) to guide the search toward promising states.
