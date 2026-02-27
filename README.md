@@ -14,7 +14,7 @@ In this modified version, all queens are initially placed in the top row. The go
 
 The project demonstrates different search strategies and heuristic techniques to compare performance and efficiency, particularly for larger board sizes where BFS and UCS become computationally expensive.
 
-How to Compile and Run
+# How to Compile and Run
 
 To compile the project, build all source files (main.cpp, ModifiedNQueens.cpp, SearchAlgorithms.cpp) to generate the executable:
 
@@ -32,7 +32,7 @@ main.exe
 
 Follow the prompts to select board size and algorithm
 
-Project Structure
+# Project Structure
 
 main.cpp – Entry point of the program
 
@@ -42,7 +42,7 @@ SearchAlgorithms.hpp / .cpp – Implements BFS, UCS, and A* search
 
 Utilities – Helper functions for state tracking and comparison
 
-Team Members
+# Team Members
 
 Umer Bin Affan (30497)
 
